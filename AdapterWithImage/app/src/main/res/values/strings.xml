@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">AdapterWithImage</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string-array name="titles">
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+    </string-array>
+
+    <string-array name="descriptions">
+        <item>Relax</item>
+        <item>Work</item>
+        <item>More Work</item>
+        <item>Full load work</item>
+        <item>want holiday</item>
+        <item>Beer Fridays</item>
+        <item>Full on fun</item>
+    </string-array>
+</resources>
