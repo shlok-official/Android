@@ -13,7 +13,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Created by ShlokDixit on 3/22/17.
+ * Created by ShlokDixit on three/22/17.
  */
 
 public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
@@ -36,14 +36,14 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         information current = data.get(position);
-        holder.title.setText(current.getTitle());
-        holder.photo.setImageResource(current.getIconId());
+        holder.title.setText(current.title);
+        holder.photo.setImageResource(current.iconId);
 
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return data.size();
     }
 
 

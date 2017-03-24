@@ -1,5 +1,7 @@
 package com.dixit.shlok.recyclerview;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -86,6 +88,11 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_camera) {
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
+            SupermanFragment fragA = new SupermanFragment();
+            FragmentManager fragmentManager = getFragmentManager();
+            FragmentTransaction transaction = fragmentManager.beginTransaction();
+            transaction.add(R.id.s1,fragA,"FragmentA");
+            transaction.commit();
 
         } else if (id == R.id.nav_slideshow) {
 
