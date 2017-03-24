@@ -18,19 +18,16 @@
 
             <ImageView
                 android:id="@+id/listIcon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
 
             <TextView
                 android:id="@+id/listText"
                 android:textAllCaps="true"
                 android:textStyle="bold"
-                android:textSize="16sp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Heading"/>
-
-
+                android:layout_height="50dp"
+                android:layout_toLeftOf="@+id/listIcon"/>
 
         </LinearLayout>
 

@@ -35,7 +35,7 @@ public class SupermanFragment extends Fragment {
     }
     public static List<information> getData(){
         List<information> data = new ArrayList<>();
-        int[] icons ={R.drawable.one, R.drawable.two, R.drawable.three, R.drawable.four};
+        int[] icons ={R.drawable.ic_menu_camera, R.drawable.ic_menu_gallery, R.drawable.ic_menu_manage, R.drawable.ic_menu_send};
         String[] titles ={"Text one","Text two","Text three","Text four"};
         for(int i =0 ; i< titles.length && i< icons.length ;i++){
             information current = new information();
