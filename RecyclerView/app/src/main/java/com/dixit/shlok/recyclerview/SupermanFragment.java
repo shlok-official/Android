@@ -18,7 +18,7 @@ import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
  * Created by ShlokDixit on three/22/17.
  */
 
-public class SupermanFragment extends Fragment {
+public class SupermanFragment extends Fragment{
     private RecyclerView recyclerViewSups;
     private Adapter adapter;
 
@@ -28,8 +28,8 @@ public class SupermanFragment extends Fragment {
         View layout =  inflater.inflate(R.layout.superman,container,false);
         recyclerViewSups = (RecyclerView) layout.findViewById(R.id.supermanFragment);
         adapter = new Adapter(getActivity(),getData());
+        //adapter.setClickListenerCustom(this);
         recyclerViewSups.setAdapter(adapter);
-        getData();
         recyclerViewSups.setLayoutManager(new LinearLayoutManager(getActivity()));
         return layout;
     }
@@ -44,4 +44,9 @@ public class SupermanFragment extends Fragment {
             data.add(current);
         }return data;
     }
+
+//    @Override
+//    public void ItemClickedCustom(View view, int position) {
+//
+//    }
 }

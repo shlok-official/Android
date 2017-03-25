@@ -1,6 +1,7 @@
 package com.dixit.shlok.recyclerview;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,9 +19,14 @@ import java.util.List;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
-    private final LayoutInflater inflator;
+    private LayoutInflater inflator;
+    private Context context;
+    //private ClickListenerCustom clickListenerCustom;
+
     List<information> data = Collections.emptyList();
+
     public Adapter(Context context, List<information> data) {
+         this.context = context;
          inflator = LayoutInflater.from(context);
          this.data = data;
     }
@@ -41,20 +47,36 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
     }
 
+//    public void setClickListenerCustom(ClickListenerCustom clickListenerCustom){
+//    this.clickListenerCustom = clickListenerCustom;
+//    }
+
     @Override
     public int getItemCount() {
         return data.size();
     }
+//Viewholder class
 
-
-    class MyViewHolder extends RecyclerView.ViewHolder{
+    class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView title;
         ImageView photo;
 
+//view holder constructor
         public MyViewHolder(View itemView) {
             super(itemView);
+            itemView.setOnClickListener(this);
             title = (TextView) itemView.findViewById(R.id.listText);
             photo = (ImageView) itemView.findViewById(R.id.listIcon);
         }
+
+        @Override
+        public void onClick(View view) {
+            context.startActivity(new Intent(context,MainActivity.class));
+
+
+        }
     }
+//    public interface ClickListenerCustom{
+//        public void ItemClickedCustom(View view,int position);
+//    }
 }
